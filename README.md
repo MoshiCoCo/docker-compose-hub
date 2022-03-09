@@ -56,3 +56,42 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 docker-compose --version
 ```
+
+## 一些约定
+
+在docker-compose.yml配置文件中，有些参数是可变的，以Redis的docker-compose.yml为例:
+
+```yaml
+version: '3'
+services:
+  redis:
+    # 镜像名称以及版本号
+    image: redis
+    # 失败后总是重启
+    restart: always
+    # 自定义容器名
+    container_name: redis-6000
+    # 文件夹以及文件映射
+    volumes:
+      - $PWD/data:/data
+      - $PWD/logs:/logs
+    command: redis-server --requirepass <your-redis-connaction-password>
+    ports:
+      # 端口号
+      - '6000:6379'
+```
+**密码相关**
+
+此处的 `command: redis-server --requirepass <your-password>` 是用于设置一个redis连接密码，该密码由用户自己生成。 本项目中此类均以`< some user password or username >`的形式展示，用户在实际填写时请勿保留`< >` .
+
+如果你的密码是 `wodemimashi123`
+
+正确写法：`command: redis-server --requirepass wodemimashi123`
+
+错误写法：`command: redis-server --requirepass <wodemimashi123>`
+
+**端口号相关**
+
+
+针对端口号`6000:6379`,这里指的是将容器内的6379端口映射到宿主机的6000端口，我们将6000称之为左侧端口（宿主机端口），6379称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的6000端口就能访问到该容器内6379端口的redis服务。 如果需要修改端口，一般只修改左侧端口。
+

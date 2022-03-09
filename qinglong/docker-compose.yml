@@ -1,0 +1,14 @@
+
+version: '3.8'
+services:
+  qinglong:
+    image: whyour/qinglong
+    container_name: qinglong
+    restart: always
+    volumes:
+      - "./ql/db:/ql/db"
+      - "./ql/config:/ql/config"
+      - "./ql/repo:/ql/repo"
+      - "./ql/scripts:/ql/scripts"
+    ports:
+      - "5600:5600"

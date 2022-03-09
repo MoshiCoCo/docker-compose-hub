@@ -28,7 +28,7 @@ Docker 和 Docker-compose 的安装请参照 [docker 和 docker-compose 的安�
 ### 常用工具
 
 - [vaultwarden](vaultwarden/) 密码管理器
-- qinglong
+- [qinglong](qinglong/) 脚本运行服务
 - [bark](bark/) 消息推送服务端
 - [drawio](drawio/) 画图工具，流程图，UML等
 - halo

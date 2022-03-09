@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  bark-server:
+    image: finab/bark-server
+    container_name: bark-server
+    restart: always
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - ./data:/data
+    ports:
+      - "9001:8080"
+    environment:
+      - TZ:Asia/Shanghai

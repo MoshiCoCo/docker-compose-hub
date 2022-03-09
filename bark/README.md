@@ -1,4 +1,4 @@
-## 镜像名
+## 镜像名 finab/bark-server
 
 ## 镜像用途
 

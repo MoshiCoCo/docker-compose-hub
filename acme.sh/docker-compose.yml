@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  acme.sh:
+    image: neilpang/acme.sh
+    container_name: acme.sh
+    restart: always
+    network_mode: "host"
+    volumes:
+      - "./acme.sh:/acme.sh"
+    environment:
+      #DnsPod
+      DP_Key: xxx
+      DP_Id: xxx

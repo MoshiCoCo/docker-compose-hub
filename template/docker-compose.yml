@@ -1,1 +1,10 @@
-
+version: '3.8'
+services:
+  xxx:
+    image: xxx
+    container_name: xxx
+    restart: always
+    volumes:
+      - "xxx:xxx"
+    ports:
+      - "xxxx:xxxx"

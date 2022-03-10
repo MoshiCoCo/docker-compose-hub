@@ -1,10 +1,23 @@
 ## 镜像名
 
+FRP 内网穿透
+
 ## 镜像用途
 
 ## 注意事项
 
-FRP
+
+
+### 使用docker-compose
+
+启动服务端：`docker-compose -f docker-compose-server.yml up -d`
+
+启动客户端：`docker-compose -f docker-compose-client.yml up -d`
+
+
+### 使用docker run 
+
+
 ```bash
 # 服务端
 

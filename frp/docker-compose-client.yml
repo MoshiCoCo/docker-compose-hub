@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  frpc:
+    image: snowdreamtech/frps
+    container_name: frpc
+    restart: always
+    volumes:
+     - /etc/localtime:/etc/localtime:ro \
+     - $PWD/frpc.ini:/etc/frp/frpc.ini \
+    network_mode: "host"

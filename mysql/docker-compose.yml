@@ -4,8 +4,6 @@ services:
     image: mysql:5.7.36
     restart: always
     container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: your password
     command:
       --default_authentication_plugin=mysql_native_password
       --character-set-server=utf8mb4
@@ -17,3 +15,5 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - $PWD/var/lib/mysql:/var/lib/mysql
       - $PWD/mysqlBackup:/data/mysqlBackup
+    environment:
+      - MYSQL_ROOT_PASSWORD: your password

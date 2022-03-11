@@ -4,13 +4,15 @@ services:
     image: neilpang/acme.sh
     container_name: acme.sh
     restart: always
-    network_mode: "host"
+    command: daemon
+  
     volumes:
       - "./acme.sh:/acme.sh"
     environment:
       #DnsPod
-      - DP_Key: <xxx>
-      - DP_Id: <xxx>
+      - DP_Key= <xxx>
+      - DP_Id= <xxx>
       ## Aliyun
-      - Ali_Key: <xxx>
-      - Ali_Secret: <xxx>
+      - Ali_Key= <xxx>
+      - Ali_Secret= <xxx>
+    network_mode: "host"

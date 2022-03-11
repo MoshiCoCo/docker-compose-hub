@@ -100,3 +100,6 @@ services:
 **端口号相关**
 
 针对端口号`6000:6379`,这里指的是将容器内的 6379 端口映射到宿主机的 6000 端口，我们将 6000 称之为左侧端口（宿主机端口），6379 称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的 6000 端口就能访问到该容器内 6379 端口的 redis 服务。 如果需要修改端口，一般只修改左侧端口。
+
+## ⭐️Stars
+![https://github-nicelee.vercel.app/h/MoshiCoCo/docker-compose-hub](https://github-nicelee.vercel.app/h/MoshiCoCo/docker-compose-hub)

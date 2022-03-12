@@ -1,0 +1,14 @@
+upstream web {
+  {{range service "k1c2b3"}}server {{.Address}}:{{.Port}} max_fails=3 fail_timeout=60 weight=1;
+  {{else}}server 127.0.0.1:65535 down; # force a 502{{end}}
+}
+
+server {
+  listen 80 default_server;
+
+  location / {
+    add_header backendIP $upstream_addr;
+    add_header backendCode $upstream_status;
+    proxy_pass http://web;
+  }
+}

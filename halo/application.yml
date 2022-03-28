@@ -1,0 +1,24 @@
+server:
+  port: 8090 
+
+  # Response data gzip.
+  compression:
+    enabled: false
+spring:
+## 数据库相关配置
+  datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://DB_URL:DB_PORT/DB_NAME?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+   username: db_username
+   password: db_password
+  h2:
+    console:
+      settings:
+        web-allow-others: false
+      path: /h2-console
+      enabled: false
+
+halo:
+# 后台管理地址
+  admin-path: admin
+  cache: memory

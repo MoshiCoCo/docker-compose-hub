@@ -38,7 +38,7 @@
 - [bark](bark/) 消息推送服务端
 - [drawio](drawio/) 画图工具，流程图，UML 等
 - [acme.sh](acme.sh/) 免费 SSL 生成工具
-- halo
+- [halo](halo/) Halo
 -
 
 ## Docker 和 Docker-Compose 的安装

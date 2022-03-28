@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server:
+    image: halohub/halo:latest
+    container_name: halo
+    restart: unless-stopped
+    volumes:
+      - ./:/root/.halo
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8050:8090"

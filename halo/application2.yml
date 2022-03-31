@@ -1,0 +1,27 @@
+server:
+  port: 8090
+  
+  # Response data gzip.
+  compression:
+    enabled: true
+    
+spring:
+  datasource:
+    # MySQL database configuration.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql_db:3306/halodb?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: mysqlpass
+  redis:
+    # Redis cache configuration.
+    port: 6379
+    database: 0
+    host: redis_db
+    password: redispass
+
+halo:
+  # Your admin client path is https://your-domain/{admin-path}
+  admin-path: admin
+
+  # memory or level or redis
+  cache: redis

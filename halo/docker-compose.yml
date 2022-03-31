@@ -6,8 +6,8 @@ services:
     container_name: halo
     restart: unless-stopped
     volumes:
-      - ./:/root/.halo
+      - $PWD/:/root/.halo
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - "8050:8090"
+      - "8090:8090"

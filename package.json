@@ -1,0 +1,28 @@
+{
+  "name": "docker-compose-hub",
+  "version": "1.0.0",
+  "description": "docker-compose-hub",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "markdownlint-cli2  './**/*.md' '#node_modules' "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoshiCoCo/docker-starter.git"
+  },
+  "author": "MoshiCoCo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MoshiCoCo/docker-starter/issues"
+  },
+  "homepage": "https://github.com/MoshiCoCo/docker-starter#readme",
+  "dependencies": {
+    "husky": "^7.0.4",
+    "markdownlint": "^0.25.1",
+    "markdownlint-cli2": "^0.4.0"
+  }
+}

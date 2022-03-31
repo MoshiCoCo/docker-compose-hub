@@ -29,7 +29,6 @@
 - [RabbitMQ](rabbit-mq/)
 - Nacos
 - ShardingSphere-Proxy
--
 
 ### 常用工具
 
@@ -39,7 +38,6 @@
 - [drawio](drawio/) 画图工具，流程图，UML 等
 - [acme.sh](acme.sh/) 免费 SSL 生成工具
 - [halo](halo/) Halo
--
 
 ## Docker 和 Docker-Compose 的安装
 
@@ -61,6 +59,19 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 docker-compose --version
+```
+
+## 参与贡献
+
+```bash
+npm intsll && npm install -g pnpm && pnpm install
+```
+
+格式检查
+
+```bash
+pnpm lint
+#或者npm run lint
 ```
 
 ## 一些约定
@@ -87,7 +98,7 @@ services:
       - "6000:6379"
 ```
 
-**密码相关**
+### 密码相关
 
 此处的 `command: redis-server --requirepass <your-password>` 是用于设置一个 redis 连接密码，该密码由用户自己生成。 本项目中此类均以`< some user password or username >`的形式展示，用户在实际填写时请勿保留`< >` .
 
@@ -97,7 +108,7 @@ services:
 
 错误写法：`command: redis-server --requirepass <wodemimashi123>`
 
-**端口号相关**
+### 端口号相关
 
 针对端口号`6000:6379`,这里指的是将容器内的 6379 端口映射到宿主机的 6000 端口，我们将 6000 称之为左侧端口（宿主机端口），6379 称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的 6000 端口就能访问到该容器内 6379 端口的 redis 服务。 如果需要修改端口，一般只修改左侧端口。
 

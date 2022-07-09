@@ -5,6 +5,6 @@ services:
     container_name: frps
     restart: always
     volumes:
-     - /etc/localtime:/etc/localtime:ro \
-     - $PWD/frps.ini:/etc/frp/frps.ini \
+     - /etc/localtime:/etc/localtime:ro
+     - $PWD/frps.ini:/etc/frp/frps.ini
     network_mode: "host"

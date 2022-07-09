@@ -6,7 +6,7 @@ description: Halo
 
 ## 镜像信息
 
-此处用于介绍镜像的基本信息，镜像源仓库，dockerhub 地址等
+本教程已经PR至 Halo 官方文档，也可以前往 [Halo官方文档/next](https://docs.halo.run/next/getting-started/install/other/docker-compose) 查看
 
 | 镜像名           |   acme.sh       |
 | ---------------- | -------- |
@@ -19,7 +19,6 @@ description: Halo
 
 ## 使用 Docker-Compose 部署 Halo
 
-本教程已经PR至 Halo 官方文档，也可以前往 [Halo官方文档/next](https://docs.halo.run/next/getting-started/install/other/docker-compose) 查看
 
 1.创建工作目录 
    
@@ -43,7 +42,6 @@ vim application.yaml
 
 Halo 基础版本
 
-基础版本的docker-compose.yaml示例请查看 [docker-compose.yaml](./docker-compose.yml) 和 [application.yaml](./application.yml)
 
 ```yaml
 version: "3"
@@ -64,8 +62,6 @@ services:
 >您可以前往 <https://hub.docker.com/r/halohub/halo> 查看最新版本镜像，我们推荐使用具体版本号的镜像，但也提供了 `latest` 标签的镜像，它始终是最新的。
 
 Halo + MySQL + Redis 版本
-
-Halo + MySQL + Redis 版本的docker-compose.yaml示例请查看 [docker-compose2.yaml](./docker-compose2.yml) 和 [application2.yaml](./application2.yml)
 
 如果您需要使用自部署的 `MySQL` 和 `Redis`，可参考如下的 `docker-compose.yaml`：
 

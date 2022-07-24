@@ -5,6 +5,8 @@
 
 ### 关于仓库
 
+**本仓库中的docker-compose文件支持Portainer一键导入创建**
+
 常用 docker 容器快速启动仓库，帮你使用 docker 完成搭建云环境的搭建。
 
 **理论上，你可以在克隆仓库后，切换到任意目录，使用`docker-compose up -d` 命令快速启动一个容器，并开始使用**
@@ -15,6 +17,16 @@
 
 - 如果想简单修改 docker-compose.yml 文件配置，但是又不懂 compose 文件的配置含义 请阅读 [compose 文件结构释义](docs/README.md)
 
+### 使用Portainer Stacks启动容器
+
+1. 点击Add stack，输入stackName。build method选择Git Repository (也可以选择upload上传下载的docker-compose.yml)
+2. 填写仓库信息
+    - Repository URL： https://github.com/MoshiCoCo/docker-compose-hub.git
+    - Repository reference ：refs/heads/docusaurus
+    - Compose path ：docker-compose/xxx/docker-compose.yml （其中xxx填写你需要的服务名路径，比如mysql）
+
+![使用Portainer Stacks启动容器](static/img/addStack.png)
+
 ### 集成开发环境
 
 使用一条 `docker-compose up -d` 命令完成 redis，mysql，mq 等开发环境的容器的启动，开箱即用。
@@ -22,7 +34,8 @@
 ### 基础开发环境
 
 此处的容器为单个容器，按需求启动。
-
+- [portainer](docker-compose/portainer/) docker容器管理工具，包括server和edgeagent
+- [vaultwarden](docker-compose/vaultwarden/) 密码管理器
 - [MySQL](MySQL/)
 - [Redis](redis/)
 - [Redis 集群（3 主 3 从）](redis-cluster/)

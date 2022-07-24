@@ -1,1 +1,0 @@
-# nginx-consul-registrator

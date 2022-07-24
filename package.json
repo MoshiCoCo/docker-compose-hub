@@ -19,7 +19,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.18",
     "@docusaurus/preset-classic": "2.0.0-beta.18",
-    "@mdx-js/react": "^2.1.2",
+    "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
     "got": "^12.2.0",
     "nth-check": "^2.1.1",
@@ -35,7 +35,8 @@
     "husky": "^8.0.1",
     "markdownlint": "^0.26.0",
     "markdownlint-cli2": "^0.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "got": ">=11.8.5"
   },
   "browserslist": {
     "production": [

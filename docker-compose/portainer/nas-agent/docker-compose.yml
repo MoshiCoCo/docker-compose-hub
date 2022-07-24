@@ -1,0 +1,17 @@
+version: "3"
+services:
+  server:
+    image: portainer/agent:latest
+    container_name: portainer_edge_agent
+    restart: always
+    volumes:
+      # 需要修改成你的nas docker 目录，建议在docker目录下新建一个portainer_agent_data
+      - /volume1/@docker/volumes/portainer_agent_data/_data:/data 
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /:/host 
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - EDGE=1
+      - EDGE_ID=<Your EdgeAgent identifier>
+      - EDGE_KEY=<Your Edge key>
+      - EDGE_INSECURE_POLL=1

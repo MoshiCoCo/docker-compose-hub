@@ -1,0 +1,17 @@
+version: "3"
+services:
+  server:
+    image: portainer/agent:latest
+    container_name: portainer_edge_agent
+    restart: always
+    volumes:
+      - $PWD/data:/data 
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /:/host 
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - EDGE=1
+      - EDGE_ID=<Your EdgeAgent identifier>
+      - EDGE_KEY=<Your Edge key>
+      - EDGE_INSECURE_POLL=1

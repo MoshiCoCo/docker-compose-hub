@@ -4,7 +4,7 @@ services:
     image: netdata/netdata
     container_name: netdata
     # set to fqdn of host
-    hostname: My Server Aliyun 
+    hostname: My Server Aliyun
     ports:
       - 19999:19999
     restart: unless-stopped

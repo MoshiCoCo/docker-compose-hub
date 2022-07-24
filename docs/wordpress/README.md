@@ -1,19 +1,18 @@
-<!-- images information template  -->
 ---
-title: wordpress
-description: wordpress
+title: WordPress
+description: WordPress
 ---
 
 ## 镜像信息
 
-| 镜像名    | wordpress:latest      |
-| --------- | ---------------------------- |
-| 源仓库    | [源仓库](https://github.com) |
+| 镜像名       | wordpress:latest             |
+|-----------|------------------------------|
+| 源仓库       | [源仓库](https://github.com)    |
 | DockerHub | [源仓库](https://dockerhub.com) |
 
 ## 镜像用途
 
-wordpress 博客
+WordPress 博客
 
 ## 注意事项
 

@@ -5,7 +5,7 @@ services:
     container_name: acme.sh
     restart: always
     command: daemon
-  
+
     volumes:
       - "./acme.sh:/acme.sh"
     environment:

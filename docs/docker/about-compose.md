@@ -1,3 +1,10 @@
+---
+id: About-Docker-Compose
+sidebar_position: 2
+title: About Docker-Compose
+description: About Docker-Compose
+---
+
 ## docker-compose.yml
 
 **`docker-compose.yml`文件结构**
@@ -9,37 +16,33 @@ version: "3"
 services:
   # mysql容器的配置项目
   mysql:
-    # 镜像名称以及版本号
-    image: mysql:5.7.36
-    # 失败后总是重启
-    restart:always
-    # 自定义容器名
+    image: mysql:8.0.18
+    restart: always
     container_name: mysql
-    # 启动命令
     command:
       --default_authentication_plugin=mysql_native_password
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_general_ci
       --explicit_defaults_for_timestamp=true
-      # 端口映射
+      --lower_case_table_names=1
+      --max_allowed_packet=128M
+      --sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
     ports:
-      - "21406:3306"
-    # 文件夹以及文件映射
+      - "3306:3306"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - $PWD/var/lib/mysql:/var/lib/mysql
       - $PWD/mysqlBackup:/data/mysqlBackup
-      #环境变量
     environment:
-      - MYSQL_ROOT_PASSWORD: <your password>
-
+      - MYSQL_ROOT_PASSWORD=<your password>
+      - MYSQL_ROOT_HOST='%'
   redis:
     # 镜像名称以及版本号
     image: redis
     # 失败后总是重启
     restart: always
     # 自定义容器名
-    container_name: redis-6000
+    container_name: redis-6379
     # 文件夹以及文件映射
     volumes:
       - $PWD/data:/data
@@ -47,5 +50,5 @@ services:
     command: redis-server --requirepass <your password>
     ports:
       # 端口号
-      - "6000:6379"
+      - "6379:6379"
 ```

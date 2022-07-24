@@ -14,7 +14,7 @@ services:
       STATE: state
       COUNTRY_CODE: country
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://yourdomin.com || exit 1"]
+      test: [ "CMD-SHELL", "curl -f http://yourdomin.com || exit 1" ]
       interval: 1m30s
       timeout: 10s
       retries: 5

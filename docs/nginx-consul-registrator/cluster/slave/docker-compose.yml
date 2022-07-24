@@ -1,32 +1,32 @@
 version: '3'
 services:
-    consul:
-      image: consul:latest
-      restart: always
-      hostname: consul_server_slave
-      ports:
-        - "8300:8300"
-        - "8301:8301"
-        - "8302:8302"
-        - "8400:8400"
-        - "8500:8500"
-        - "8600:8600"
-      command: "consul agent -server -join ${CONSUL_MASTER_IP} -advertise ${CURRENT_IP} -node ${CONSUL_NODE_NAME} -data-dir /tmp/data-dir -client 0.0.0.0 -ui"
-    registrator:
-      image: gliderlabs/registrator:latest
-      restart: always
-      hostname: registrator
-      volumes:
-        - "/var/run/docker.sock:/tmp/docker.sock"
-      command: "-ip ${CURRENT_IP} consul://${CURRENT_IP}:8500"
-    elb:
-      build:
-        context: ../../nginx-consul-template
-        args:
-          SERVICE: web
-      restart: always
-      hostname: elb
-      environment:
-        CONSUL: "${CURRENT_IP}:8500"
-      ports:
-        - "9080:80"
+  consul:
+    image: consul:latest
+    restart: always
+    hostname: consul_server_slave
+    ports:
+      - "8300:8300"
+      - "8301:8301"
+      - "8302:8302"
+      - "8400:8400"
+      - "8500:8500"
+      - "8600:8600"
+    command: "consul agent -server -join ${CONSUL_MASTER_IP} -advertise ${CURRENT_IP} -node ${CONSUL_NODE_NAME} -data-dir /tmp/data-dir -client 0.0.0.0 -ui"
+  registrator:
+    image: gliderlabs/registrator:latest
+    restart: always
+    hostname: registrator
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock"
+    command: "-ip ${CURRENT_IP} consul://${CURRENT_IP}:8500"
+  elb:
+    build:
+      context: ../../nginx-consul-template
+      args:
+        SERVICE: web
+    restart: always
+    hostname: elb
+    environment:
+      CONSUL: "${CURRENT_IP}:8500"
+    ports:
+      - "9080:80"

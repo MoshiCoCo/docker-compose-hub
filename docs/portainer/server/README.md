@@ -1,11 +1,14 @@
-<!-- images information template  -->
+---
+title:  portainer-ce
+description: portainer-ce
+---
 
 ## 镜像信息
 
-| 镜像名    | portainer/portainer-ce:latest   |
-| --------- | ------------------------------- |
-| 源仓库    | [源仓库](https://github.com)    |
-| DockerHub | [源仓库](https://dockerhub.com) |
+| 镜像名       | portainer/portainer-ce:latest |
+|-----------|-------------------------------|
+| 源仓库       | [源仓库](https://github.com)     |
+| DockerHub | [源仓库](https://dockerhub.com)  |
 
 ## 镜像用途
 
@@ -23,7 +26,7 @@ services:
     container_name: portainer
     restart: always
     volumes:
-      - $PWD/data:/data 
+      - $PWD/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
       ## 挂载机器的时间配置，不然容器内的时间和宿主机时间不一致
       - /etc/timezone:/etc/timezone:ro

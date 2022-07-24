@@ -4,7 +4,7 @@ server:
   # Response data gzip.
   compression:
     enabled: true
-    
+
 spring:
   datasource:
     # MySQL database configuration.

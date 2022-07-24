@@ -1,7 +1,7 @@
 version: '3'
 services:
   mysql:
-    image: mysql:5.7.36
+    image: mysql:8.0.18
     restart: always
     container_name: mysql
     command:
@@ -9,11 +9,15 @@ services:
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_general_ci
       --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+      --max_allowed_packet=128M
+      --sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
     ports:
-      - "21406:3306"
+      - "3306:3306"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - $PWD/var/lib/mysql:/var/lib/mysql
       - $PWD/mysqlBackup:/data/mysqlBackup
     environment:
-      - MYSQL_ROOT_PASSWORD: your password
+      - MYSQL_ROOT_PASSWORD=<your password>
+      - MYSQL_ROOT_HOST='%'

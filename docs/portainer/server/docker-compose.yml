@@ -1,14 +1,14 @@
 version: "3"
 services:
-  server:
+  portainer-ce:
     image: portainer/portainer-ce:latest
     container_name: portainer
     restart: always
     volumes:
-      - $PWD/data:/data 
+      - $PWD/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - 8000:8000
-      - 9000:9000
+      - "8000:8000"
+      - "9000:9000"

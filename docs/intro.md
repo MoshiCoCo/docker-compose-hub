@@ -4,26 +4,23 @@ description: Docker-Compose Hub
 sidebar_position: 0
 ---
 
-
 ### 关于仓库
 
-**本仓库中的docker-compose文件支持Portainer一键导入创建**
+常用 docker 容器快速启动仓库，帮你使用 docker 完成搭建云环境的搭建, **本仓库中的docker-compose文件支持Portainer一键导入创建**。
 
-常用 docker 容器快速启动仓库，帮你使用 docker 完成搭建云环境的搭建。
-
-**理论上，你可以在克隆仓库后，切换到任意目录，使用`docker-compose up -d` 命令快速启动一个容器，并开始使用**
+**理论上，你可以在克隆仓库后，切换到任意目录，使用 `docker-compose up -d` 命令快速启动一个容器，并开始使用**
 
 目前涵盖了我常用的开发环境和工具环境，文档描述比较粗糙，后续会润色。部分是 docker run 命令，后续会增加 docker-compose.yml 文件
 
 - Docker 和 Docker-Compose 的安装请参照 [docker 和 docker-compose 的安装](#docker-和-docker-compose-的安装)
 
-- 如果想简单修改 docker-compose.yml 文件配置，但是又不懂 compose 文件的配置含义 请阅读 [compose 文件结构释义](about.md)
+- 如果想简单修改 docker-compose.yml 文件配置，但是又不懂 compose 文件的配置含义 请阅读 [compose 文件结构释义](docker/about-compose.md)
 
 ### 使用Portainer Stacks启动容器
 
 1. 点击Add stack，输入stackName。build method选择Git Repository (也可以选择upload上传下载的docker-compose.yml)
 2. 填写仓库信息
-    - Repository URL： https://github.com/MoshiCoCo/docker-compose-hub.git
+    - Repository URL： <https://github.com/MoshiCoCo/docker-compose-hub.git>
     - Repository reference ：refs/heads/docusaurus
     - Compose path ：docker-compose/xxx/docker-compose.yml （其中xxx填写你需要的服务名路径，比如mysql）
 
@@ -36,7 +33,8 @@ sidebar_position: 0
 ### 基础开发环境
 
 此处的容器为单个容器，按需求启动。
-- [Portainer](portainer/server/)docker容器管理工具，包括server和edgeagent 
+
+- [Portainer](portainer/server/)docker容器管理工具，包括server和edgeagent
 - [vaultwarden](vaultwarden) 密码管理器
 - [MySQL](MySQL/)
 - [Redis](redis/)
@@ -44,7 +42,6 @@ sidebar_position: 0
 - [RabbitMQ](rabbit-mq/)
 - Nacos
 - ShardingSphere-Proxy
-
 
 ### 常用工具
 
@@ -116,7 +113,8 @@ services:
 
 ### 密码相关
 
-此处的 `command: redis-server --requirepass <your-password>` 是用于设置一个 redis 连接密码，该密码由用户自己生成。 本项目中此类均以`< some user password or username >`的形式展示，用户在实际填写时请勿保留`< >` .
+此处的 `command: redis-server --requirepass <your-password>` 是用于设置一个 redis 连接密码，该密码由用户自己生成。
+本项目中此类均以`< some user password or username >`的形式展示，用户在实际填写时请勿保留`< >` .
 
 如果你的密码是 `wodemimashi123`
 
@@ -126,7 +124,8 @@ services:
 
 ### 端口号相关
 
-针对端口号`6000:6379`,这里指的是将容器内的 6379 端口映射到宿主机的 6000 端口，我们将 6000 称之为左侧端口（宿主机端口），6379 称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的 6000 端口就能访问到该容器内 6379 端口的 redis 服务。 如果需要修改端口，一般只修改左侧端口。
+针对端口号`6000:6379`,这里指的是将容器内的 6379 端口映射到宿主机的 6000 端口，我们将 6000 称之为左侧端口（宿主机端口），6379 称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的 6000
+端口就能访问到该容器内 6379 端口的 redis 服务。 如果需要修改端口，一般只修改左侧端口。
 
 ## ⭐️Stars
 

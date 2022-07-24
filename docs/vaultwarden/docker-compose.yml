@@ -8,7 +8,7 @@ services:
       - .env
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
-      - ./vaultwarden-data/:/data/  
+      - ./vaultwarden-data/:/data/
     ports:
       - "8072:80"
     environment:

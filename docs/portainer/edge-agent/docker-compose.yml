@@ -1,13 +1,13 @@
 version: "3"
 services:
-  server:
+  portainer_edge_agent:
     image: portainer/agent:latest
     container_name: portainer_edge_agent
     restart: always
     volumes:
-      - $PWD/data:/data 
+      - $PWD/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
-      - /:/host 
+      - /:/host
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:

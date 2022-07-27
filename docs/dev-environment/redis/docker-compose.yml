@@ -14,4 +14,4 @@ services:
     command: redis-server --requirepass your-password
     ports:
       # 端口号
-      - '6000:6379'
+      - "6379:6379"

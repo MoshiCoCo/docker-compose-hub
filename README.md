@@ -32,7 +32,7 @@ cd docs/mysql && docker compose up -d
 此处的容器为单个容器，按需求启动。
 
 - [portainer](docs/portainer/server)  docker容器管理工具，包括server和edgeagent
-- [MySQL](docs/mysql****)
+- [MySQL](docs/mysql)
 - [Redis](docs/redis)
 - [Redis 集群（3 主 3 从）](docs/redis-cluster)
 - [RabbitMQ](docs/rabbit-mq)

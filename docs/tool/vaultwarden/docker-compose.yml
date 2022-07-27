@@ -7,12 +7,13 @@ services:
     env_file:
       - .env
     volumes:
-      - "/etc/localtime:/etc/localtime:ro"
+      - /etc/localtime:/etc/localtime:ro
       - ./vaultwarden-data/:/data/
     ports:
       - "8072:80"
     environment:
       - TZ:Asia/Shanghai
+      ## 如果采用挂载.env的方式，以下配置可以删除，均可在.env中配置
       - SIGNUPS_ALLOWED=false
       # 如果使用mysql数据库，放开这两行的配置即可。否则默认使用sqllite
       # - RUST_BACKTRACE=1

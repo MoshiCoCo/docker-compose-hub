@@ -115,6 +115,7 @@ services:
 ```bash
 npm intsll && npm install -g pnpm && pnpm install
 ```
+
 请按照模板文件`/template`的格式填写，并将文件放置到 `docs/` 目录下对应的类别中
 
 格式检查

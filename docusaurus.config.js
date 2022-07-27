@@ -20,10 +20,10 @@ const config = {
         ({
             docs: {
                 sidebarPath: require.resolve('./sidebars.js'), // Please change this to your repo.
-                editUrl: 'https://github.com/MoshiCoCo/docker-compose-hub/blob/docusaurus/',
+                editUrl: 'https://github.com/MoshiCoCo/docker-compose-hub/blob/main/',
             }, blog: {
                 showReadingTime: true, // Please change this to your repo.
-                editUrl: 'https://github.com/MoshiCoCo/docker-compose-hub/blob/docusaurus/',
+                editUrl: 'https://github.com/MoshiCoCo/docker-compose-hub/blob/main/',
             }, theme: {
                 customCss: require.resolve('./src/css/custom.css'),
             },

@@ -24,7 +24,8 @@ cd docs/mysql && docker compose up -d
 
 - Docker 和 Docker-Compose 的安装请参考 [docker 和 docker-compose 的安装](docs/docker/install-docker-and-compose.md)
 
-- 如果想简单修改 `docker-compose.yml` 文件配置，但是又不懂 `compose` 文件的配置含义,请简单阅读 [compose 文件结构释义](docs/docker/about-compose.md)
+- 如果想简单修改 `docker-compose.yml` 文件配置，但是又不懂 `compose`
+  文件的配置含义,请简单阅读 [compose 文件结构释义](docs/docker/about-compose.md)
   或者阅读`docker`官方文档[Compose file reference](https://docs.docker.com/compose/compose-file/)
 
 ### 基础开发环境
@@ -39,6 +40,7 @@ cd docs/mysql && docker compose up -d
 - [Nginx Consul Registrator](docs/dev-environment/nginx-consul-registrator)
 - Nacos
 - ShardingSphere-Proxy
+- .....
 
 ### 常用工具
 
@@ -51,6 +53,9 @@ cd docs/mysql && docker compose up -d
 - [Frp](docs/tool/frp) frp 代理服务器
 - [Netdata](docs/tool/netdata) Netdata 网络监控工具
 - [WordPress](docs/tool/wordpress) WordPress博客
+- .....
+
+详细支持列表请查阅 [完整的镜像列表](docs/projet-info/support-list.md)
 
 ## 使用方式
 

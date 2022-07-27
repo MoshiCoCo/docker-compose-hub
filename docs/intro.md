@@ -34,23 +34,23 @@ sidebar_position: 0
 
 此处的容器为单个容器，按需求启动。
 
-- [Portainer](portainer/server/)docker容器管理工具，包括server和edgeagent
-- [vaultwarden](vaultwarden) 密码管理器
+- [Portainer](docs/dev-environment/portainer/server/)docker容器管理工具，包括server和edgeagent
+- [vaultwarden](docs/tool/vaultwarden) 密码管理器
 - [MySQL](MySQL/)
-- [Redis](redis/)
-- [Redis 集群（3 主 3 从）](redis-cluster/)
-- [RabbitMQ](rabbit-mq/)
+- [Redis](docs/dev-environment/redis/)
+- [Redis 集群（3 主 3 从）](docs/dev-environment/redis-cluster/)
+- [RabbitMQ](docs/dev-environment/rabbit-mq/)
 - Nacos
 - ShardingSphere-Proxy
 
 ### 常用工具
 
-- [vaultwarden](vaultwarden/) 密码管理器
-- [qinglong](qinglong/) 脚本运行服务
-- [bark](bark/) 消息推送服务端
-- [drawio](drawio/) 画图工具，流程图，UML 等
-- [acme.sh](acme-sh/) 免费 SSL 生成工具
-- [halo](halo/) Halo
+- [vaultwarden](docs/tool/vaultwarden/) 密码管理器
+- [qinglong](docs/tool/qinglong/) 脚本运行服务
+- [bark](docs/tool/bark/) 消息推送服务端
+- [drawio](docs/tool/drawio/) 画图工具，流程图，UML 等
+- [acme.sh](docs/tool/acme-sh/) 免费 SSL 生成工具
+- [halo](docs/tool/halo/) Halo
 
 ## Docker 和 Docker-Compose 的安装
 

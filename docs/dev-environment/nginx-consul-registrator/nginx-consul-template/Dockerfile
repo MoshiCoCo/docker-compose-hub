@@ -25,7 +25,7 @@ ENV SERVICE ${SERVICE}
 # 1. Write Consul Template File
 # 2. Start Nginx
 # 3. Start Consul Template
-COPY ./nginx.conf.ctmpl $CT_FILE
+COPY nginx.conf.ctmpl $CT_FILE
 RUN sed -i "s/k1c2b3/${SERVICE}/g" $CT_FILE
 
 CMD /usr/sbin/nginx -c /etc/nginx/nginx.conf \

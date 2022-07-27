@@ -31,22 +31,26 @@ cd docs/mysql && docker compose up -d
 
 此处的容器为单个容器，按需求启动。
 
-- [portainer](docs/portainer/server)  docker容器管理工具，包括server和edgeagent
-- [MySQL](docs/mysql)
-- [Redis](docs/redis)
-- [Redis 集群（3 主 3 从）](docs/redis-cluster)
-- [RabbitMQ](docs/rabbit-mq)
+- [Portainer](docs/dev-environment/portainer/server)  docker容器管理工具，包括server和edgeagent
+- [MySQL](docs/dev-environment/mysql)
+- [Redis](docs/dev-environment/redis)
+- [Redis 集群（3 主 3 从）](docs/dev-environment/redis-cluster)
+- [Rabbit MQ](docs/dev-environment/rabbit-mq)
+- [Nginx Consul Registrator](docs/dev-environment/nginx-consul-registrator)
 - Nacos
 - ShardingSphere-Proxy
 
 ### 常用工具
 
-- [vaultwarden](docs/vaultwarden) 密码管理器
-- [qinglong](docs/qinglong) 脚本运行服务
-- [bark](docs/bark) 消息推送服务端
-- [drawio](docs/drawio) 画图工具，流程图，UML 等
-- [acme.sh](docs/acme-sh) 免费 SSL 生成工具
-- [halo](docs/halo) Halo 博客
+- [Vaultwarden](docs/tool/vaultwarden) 密码管理器
+- [Qinglong](docs/tool/qinglong) 脚本运行服务
+- [Bark Server](docs/tool/bark) 消息推送服务端
+- [Drawio](docs/tool/drawio) 画图工具，流程图，UML 等
+- [Acme.sh](docs/tool/acme-sh) 免费 SSL 生成工具
+- [Halo](docs/tool/halo) Halo 博客
+- [Frp](docs/tool/frp) frp 代理服务器
+- [Netdata](docs/tool/netdata) Netdata 网络监控工具
+- [WordPress](docs/tool/wordpress) WordPress博客
 
 ## 使用方式
 

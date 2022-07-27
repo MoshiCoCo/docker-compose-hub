@@ -1,1 +1,19 @@
+version: '3'
+services:
+  rabbit-mq:
+    # 镜像名称以及版本号
+    image: rabbitmq:3-management
+    # 失败后总是重启
+    restart: always
+    # 自定义容器名
+    container_name: rabbitmq
+    # 文件夹以及文件映射
+    volumes:
+      - $PWD/etc:/etc/rabbitmq
+      - $PWD/lib:/var/lib/rabbitmq
+      - $PWD/log:/var/log/rabbitmq
+    ports:
+      # 端口号
+      - "5672:5672"
+      - "15672:15672"
 

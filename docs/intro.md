@@ -3,116 +3,109 @@ title: Docker-Compose Hub
 description: Docker-Compose Hub
 sidebar_position: 0
 ---
+<div align="center">
+<h1 align="center">Docker Compose Hub</h1>
+</div>
 
-### 关于仓库
+## 关于仓库
 
-常用 docker 容器快速启动仓库，帮你使用 docker 完成搭建云环境的搭建, **
-本仓库中的docker-compose文件支持Portainer一键导入创建**。
+本仓库提供了多种常见Docker镜像的Compose容器编排脚本和基本配置文件，支持`docker-compose`,`docker run`,`portainer`
+一键导入等多种启动方式,可以协助你使用Docker快速完成基础的（开发，应用）环境搭建。
 
-**理论上，你可以在克隆仓库后，切换到任意目录，使用 `docker-compose up -d` 命令快速启动一个容器，并开始使用**
+**针对无需配置的docker容器,你可以在克隆仓库后,使用`docker-compose up -d` 命令快速启动** 以MySQL为例:
+
+```bash
+cd docs/mysql && docker-compose up -d 
+
+# or
+# 此命令需要高版本docker engine 支持
+
+cd docs/mysql && docker compose up -d 
+```
+
+## 目前支持的镜像列表
 
 目前涵盖了我常用的开发环境和工具环境，文档描述比较粗糙，后续会润色。部分是 docker run 命令，后续会增加 docker-compose.yml 文件
 
-- Docker 和 Docker-Compose 的安装请参照 [docker 和 docker-compose 的安装](#docker-和-docker-compose-的安装)
+- Docker 和 Docker-Compose 的安装请参考 [docker 和 docker-compose 的安装](docs/docker/install-docker-and-compose.md)
 
-- 如果想简单修改 docker-compose.yml 文件配置，但是又不懂 compose 文件的配置含义
-  请阅读 [compose 文件结构释义](docker/about-compose.md)
-
-### 使用Portainer Stacks启动容器
-
-1. 点击Add stack，输入stackName。build method选择Git Repository (也可以选择upload上传下载的docker-compose.yml)
-2. 填写仓库信息
-    - Repository URL： <https://github.com/MoshiCoCo/docker-compose-hub.git>
-    - Repository reference ：refs/heads/docusaurus
-    - Compose path ：docker-compose/xxx/docker-compose.yml （其中xxx填写你需要的服务名路径，比如mysql）
-
-![使用Portainer Stacks启动容器](../static/img/addStack.png)
-
-### 集成开发环境
-
-使用一条 `docker-compose up -d` 命令完成 redis，mysql，mq 等开发环境的容器的启动，开箱即用。
+- 如果想简单修改 `docker-compose.yml` 文件配置，但是又不懂 `compose`
+  文件的配置含义,请简单阅读 [compose 文件结构释义](docs/docker/about-compose.md)
+  或者阅读`docker`官方文档[Compose file reference](https://docs.docker.com/compose/compose-file/)
 
 ### 基础开发环境
 
 此处的容器为单个容器，按需求启动。
 
-- [Portainer](docs/dev-environment/portainer/server/)docker容器管理工具，包括server和edgeagent
-- [MySQL](docs/dev-environment/mysql/) MySQL 数据库
-- [Redis](docs/dev-environment/redis/)
-- [Redis 集群（3 主 3 从）](docs/dev-environment/redis-cluster/)
-- [RabbitMQ](docs/dev-environment/rabbit-mq/)
+- [Portainer](docs/dev-environment/portainer/server)  docker容器管理工具，包括server和edgeagent
+- [MySQL](docs/dev-environment/mysql)
+- [Redis](docs/dev-environment/redis)
+- [Redis 集群（3 主 3 从）](docs/dev-environment/redis-cluster)
+- [Rabbit MQ](docs/dev-environment/rabbit-mq)
+- [Nginx Consul Registrator](docs/dev-environment/nginx-consul-registrator)
 - Nacos
 - ShardingSphere-Proxy
 
 ### 常用工具
 
-- [Vaultwarden](docs/tool/vaultwarden/) 密码管理器
-- [Qinglong](docs/tool/qinglong/) 脚本运行服务
-- [Bark](docs/tool/bark/) 消息推送服务端
-- [Drawio](docs/tool/drawio/) 画图工具，流程图，UML 等
-- [Acme.sh](docs/tool/acme-sh/) 免费 SSL 生成工具
-- [Halo](docs/tool/halo/) Halo
+- [Vaultwarden](docs/tool/vaultwarden) 密码管理器
+- [Qinglong](docs/tool/qinglong) 脚本运行服务
+- [Bark Server](docs/tool/bark) 消息推送服务端
+- [Drawio](docs/tool/drawio) 画图工具，流程图，UML 等
+- [Acme.sh](docs/tool/acme-sh) 免费 SSL 生成工具
+- [Halo](docs/tool/halo) Halo 博客
+- [Frp](docs/tool/frp) frp 代理服务器
+- [Netdata](docs/tool/netdata) Netdata 网络监控工具
+- [WordPress](docs/tool/wordpress) WordPress博客
 
-## Docker 和 Docker-Compose 的安装
+## 使用方式
 
-### 安装 docker
+### 使用Portainer Stacks启动容器
 
-```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
+1. 点击Add stack，输入stackName。build method选择Git Repository (也可以选择upload方式,手动上传docker-compose.yml文件)
+2. 填写仓库信息
 
-sudo sh get-docker.sh
-```
+    - Repository URL: <https://github.com/MoshiCoCo/docker-compose-hub.git>
+    - Repository reference :refs/heads/docusaurus
+    - Compose path :docker-compose/xxx/docker-compose.yml （其中xxx填写你需要的服务名路径，比如mysql）
 
-### 安装 Docker-compose
+![使用Portainer Stacks启动容器](static/img/addStack.png)
 
-```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-sudo chmod +x /usr/local/bin/docker-compose
-
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-
-docker-compose --version
-```
-
-## 参与贡献
+### 使用docker-compose命令启动容器
 
 ```bash
-npm intsll && npm install -g pnpm && pnpm install
-```
+# 1
+git clone https://github.com/MoshiCoCo/docker-compose-hub.git
 
-格式检查
+# 2
+cd /docker-compose-hub/docs/mysql && docker-compose up -d 
 
-```bash
-pnpm lint
-#或者npm run lint
+# or
+# 此命令需要高版本docker engine 支持
+
+cd docs/mysql && docker compose up -d 
 ```
 
 ## 一些约定
 
-在 docker-compose.yml 配置文件中，有些参数是可变的，以 Redis 的 docker-compose.yml 为例:
+在 docker-compose.yml 配置文件中，有些参数是可变的,以redis镜像的docker-compose编排文件为例:
 
 ```yaml
 version: "3"
 services:
   redis:
-    # 镜像名称以及版本号
     image: redis
-    # 失败后总是重启
     restart: always
-    # 自定义容器名
     container_name: redis-6000
-    # 文件夹以及文件映射
     volumes:
       - $PWD/data:/data
       - $PWD/logs:/logs
     command: redis-server --requirepass <your-redis-connaction-password>
     ports:
-      # 端口号
       - "6000:6379"
 ```
 
-### 密码相关
+1. 密码相关
 
 此处的 `command: redis-server --requirepass <your-password>` 是用于设置一个 redis 连接密码，该密码由用户自己生成。
 本项目中此类均以`< some user password or username >`的形式展示，用户在实际填写时请勿保留`< >` .
@@ -123,11 +116,20 @@ services:
 
 错误写法：`command: redis-server --requirepass <wodemimashi123>`
 
-### 端口号相关
+## 参与贡献
 
-针对端口号`6000:6379`,这里指的是将容器内的 6379 端口映射到宿主机的 6000 端口，我们将 6000 称之为左侧端口（宿主机端口），6379
-称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的 6000
-端口就能访问到该容器内 6379 端口的 redis 服务。 如果需要修改端口，一般只修改左侧端口。
+```bash
+npm intsll && npm install -g pnpm && pnpm install
+```
+
+请按照模板文件`/template`的格式填写，并将文件放置到 `docs/` 目录下对应的类别中
+
+格式检查
+
+```bash
+pnpm lint
+#或者npm run lint
+```
 
 ## ⭐️Stars
 

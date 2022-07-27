@@ -69,7 +69,7 @@ cd docs/mysql && docker compose up -d
     - Repository reference :refs/heads/docusaurus
     - Compose path :docker-compose/xxx/docker-compose.yml （其中xxx填写你需要的服务名路径，比如mysql）
 
-![使用Portainer Stacks启动容器](static/img/addStack.png)
+![使用Portainer Stacks启动容器](../static/img/addStack.png)
 
 ### 使用docker-compose命令启动容器
 

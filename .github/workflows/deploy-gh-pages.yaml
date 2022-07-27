@@ -57,4 +57,5 @@ jobs:
           publish_dir: ./build
           # 默认发布到 gh-pages 分支上，可以指定特定的发布分支（不能选拉取代码的分支）
           publish_branch: gh-pages
+          cname: docker-compose.misec.top
           full_commit_message: ${{ github.event.head_commit.message }}

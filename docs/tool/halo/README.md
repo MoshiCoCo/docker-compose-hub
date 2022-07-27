@@ -5,7 +5,8 @@ description: Halo
 
 ## 镜像信息
 
-本教程已经PR至 Halo 官方文档，也可以前往 [Halo官方文档/next](https://docs.halo.run/next/getting-started/install/other/docker-compose) 查看
+本教程已经PR至 Halo
+官方文档，也可以前往 [Halo官方文档/next](https://docs.halo.run/next/getting-started/install/other/docker-compose) 查看
 
 | 镜像名           |   acme.sh       |
 | ---------------- | -------- |
@@ -56,7 +57,8 @@ services:
       - "8090:8090"
 ```
 
-> 您可以前往 <https://hub.docker.com/r/halohub/halo> 查看最新版本镜像，我们推荐使用具体版本号的镜像，但也提供了 `latest` 标签的镜像，它始终是最新的。
+> 您可以前往 <https://hub.docker.com/r/halohub/halo> 查看最新版本镜像，我们推荐使用具体版本号的镜像，但也提供了 `latest`
+> 标签的镜像，它始终是最新的。
 
 Halo + MySQL + Redis 版本
 
@@ -128,7 +130,8 @@ networks:
         - subnet: 172.19.0.0/16
 ```
 
-> 注意，如果您使用了自部署的 `MySQL` 和 `Redis`，由于 `Halo` 启动时并不会主动创建数据库或者 `schema` ，所以您应该提前创建好 `init.sql` 并且同步更改 `application.yaml`
+> 注意，如果您使用了自部署的 `MySQL` 和 `Redis`，由于 `Halo` 启动时并不会主动创建数据库或者 `schema`
+> ，所以您应该提前创建好 `init.sql` 并且同步更改 `application.yaml`
 > 中的数据源地址和 `cache` 选项。
 
 创建 init.sql :
@@ -171,12 +174,14 @@ halo:
 docker-compose up -d
 ```
 
-> 注意：如果您未在 `application.yaml` 中修改数据源配置，使用此命令启动则会默认使用自带的 `H2 Database` 数据库。如需使用 `MySQL`，请将 `datasource` 配置更改为 `MySQL`
+> 注意：如果您未在 `application.yaml` 中修改数据源配置，使用此命令启动则会默认使用自带的 `H2 Database`
+> 数据库。如需使用 `MySQL`，请将 `datasource` 配置更改为 `MySQL`
 > 的配置。
 
 6.打开 `http://ip:端口号` 即可看到安装引导界面。
 
-> 如果需要配置域名访问，建议先配置好反向代理以及域名解析再进行初始化。如果通过 `http://ip:端口号` 的形式无法访问，请到服务器厂商后台将运行的端口号添加到安全组，如果服务器使用了 Linux 面板，请检查此 Linux
+> 如果需要配置域名访问，建议先配置好反向代理以及域名解析再进行初始化。如果通过 `http://ip:端口号`
+> 的形式无法访问，请到服务器厂商后台将运行的端口号添加到安全组，如果服务器使用了 Linux 面板，请检查此 Linux
 > 面板是否有还有安全组配置，需要同样将端口号添加到安全组。
 
 ## 反向代理

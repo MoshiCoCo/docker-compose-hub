@@ -6,7 +6,8 @@ sidebar_position: 0
 
 ### 关于仓库
 
-常用 docker 容器快速启动仓库，帮你使用 docker 完成搭建云环境的搭建, **本仓库中的docker-compose文件支持Portainer一键导入创建**。
+常用 docker 容器快速启动仓库，帮你使用 docker 完成搭建云环境的搭建, **
+本仓库中的docker-compose文件支持Portainer一键导入创建**。
 
 **理论上，你可以在克隆仓库后，切换到任意目录，使用 `docker-compose up -d` 命令快速启动一个容器，并开始使用**
 
@@ -14,7 +15,8 @@ sidebar_position: 0
 
 - Docker 和 Docker-Compose 的安装请参照 [docker 和 docker-compose 的安装](#docker-和-docker-compose-的安装)
 
-- 如果想简单修改 docker-compose.yml 文件配置，但是又不懂 compose 文件的配置含义 请阅读 [compose 文件结构释义](docker/about-compose.md)
+- 如果想简单修改 docker-compose.yml 文件配置，但是又不懂 compose 文件的配置含义
+  请阅读 [compose 文件结构释义](docker/about-compose.md)
 
 ### 使用Portainer Stacks启动容器
 
@@ -123,7 +125,8 @@ services:
 
 ### 端口号相关
 
-针对端口号`6000:6379`,这里指的是将容器内的 6379 端口映射到宿主机的 6000 端口，我们将 6000 称之为左侧端口（宿主机端口），6379 称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的 6000
+针对端口号`6000:6379`,这里指的是将容器内的 6379 端口映射到宿主机的 6000 端口，我们将 6000 称之为左侧端口（宿主机端口），6379
+称之为右侧端口（容器内的服务端口），大白话：这样写的话你使用服务器的 6000
 端口就能访问到该容器内 6379 端口的 redis 服务。 如果需要修改端口，一般只修改左侧端口。
 
 ## ⭐️Stars

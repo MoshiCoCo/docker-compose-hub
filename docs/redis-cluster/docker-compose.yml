@@ -1,1 +1,110 @@
+version: '3'
+services:
+  redis-7000:
+    image: redis
+    restart: always
+    container_name: redis-7000
+    sysctls:
+      - net.core.somaxconn=1024
+    networks:
+      - redis-network
+    volumes:
+      - $PWD/7000/data:/data
+      - $PWD/7000/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - $PWD/7000/logs:/logs
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    ports:
+      - '7000:7000'
+      - '17000:17000'
+  redis-7001:
+    image: redis
+    restart: always
+    container_name: redis-7001
+    sysctls:
+      - net.core.somaxconn=1024
+    networks:
+      - redis-network
+    volumes:
+      - $PWD/7001/data:/data
+      - $PWD/7001/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - $PWD/7001/logs:/logs
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    ports:
+      - '7001:7001'
+      - '17001:17001'
 
+  redis-7002:
+    image: redis
+    restart: always
+    container_name: redis-7002
+    sysctls:
+      - net.core.somaxconn=1024
+    networks:
+      - redis-network
+    volumes:
+      - $PWD/7002/data:/data
+      - $PWD/7002/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - $PWD/7002/logs:/logs
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    ports:
+      - '7002:7002'
+      - '17002:17002'
+
+  redis-7003:
+    image: redis
+    restart: always
+    container_name: redis-7003
+    sysctls:
+      - net.core.somaxconn=1024
+    networks:
+      - redis-network
+    volumes:
+      - $PWD/7003/data:/data
+      - $PWD/7003/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - $PWD/7003/logs:/logs
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    ports:
+      - '7003:7003'
+      - '17003:17003'
+
+  redis-7004:
+    image: redis
+    restart: always
+    container_name: redis-7004
+    sysctls:
+      - net.core.somaxconn=1024
+    networks:
+      - redis-network
+    volumes:
+      - $PWD/7004/data:/data
+      - $PWD/7004/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - $PWD/7004/logs:/logs
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    ports:
+      - '7004:7004'
+      - '17004:17004'
+
+  redis-7005:
+    image: redis
+    restart: always
+    container_name: redis-7005
+    sysctls:
+      - net.core.somaxconn=1024
+    networks:
+      - redis-network
+    volumes:
+      - $PWD/7005/data:/data
+      - $PWD/7005/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - $PWD/7005/logs:/logs
+    command: [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    ports:
+      - '7005:7005'
+      - '17005:17005'
+
+networks:
+  redis-network:
+    name: redis
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.26.0.0/16

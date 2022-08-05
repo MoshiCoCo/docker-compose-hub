@@ -38,6 +38,7 @@ cd docs/mysql && docker compose up -d
 - [Redis 集群（3 主 3 从）](docs/dev-environment/redis-cluster)
 - [Rabbit MQ](docs/dev-environment/rabbit-mq)
 - [Nginx Consul Registrator](docs/dev-environment/nginx-consul-registrator)
+- [MinIO](docs/dev-environment/minio)
 - Nacos
 - ShardingSphere-Proxy
 - .....

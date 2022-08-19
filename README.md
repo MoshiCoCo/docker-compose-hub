@@ -134,3 +134,8 @@ pnpm lint
 ## ⭐️Stars
 
 [![Stargazers over time](https://starchart.cc/MoshiCoCo/docker-compose-hub.svg)](https://starchart.cc/MoshiCoCo/docker-compose-hub)
+
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)

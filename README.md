@@ -1,6 +1,18 @@
 <div align="center">
-<h1 align="center">Docker Compose Hub</h1>
+<h1 align="center">Docker-Compose-Hub</h1>
 </div>
+
+- [关于仓库](#关于仓库)
+- [目前支持的镜像列表](#目前支持的镜像列表)
+  - [基础开发环境](#基础开发环境)
+  - [常用工具](#常用工具)
+- [使用方式](#使用方式)
+  - [使用Portainer Stacks启动容器](#使用portainer-stacks启动容器)
+  - [使用docker-compose命令启动容器](#使用docker-compose命令启动容器)
+- [一些约定](#一些约定)
+- [参与贡献](#参与贡献)
+- [关注我](#关注我)
+- [⭐️Stars](#️stars)
 
 ## 关于仓库
 
@@ -129,6 +141,11 @@ npm intsll && npm install -g pnpm && pnpm install
 pnpm lint
 #或者npm run lint
 ```
+
+## 关注我
+
+![wechatOrCode](./docs/images/wxgzh.png)
+
 
 ## ⭐️Stars
 

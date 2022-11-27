@@ -19,5 +19,6 @@ services:
       - $PWD/var/lib/mysql:/var/lib/mysql
       - $PWD/mysqlBackup:/data/mysqlBackup
     environment:
-      - MYSQL_ROOT_PASSWORD=<your password>
-      - MYSQL_ROOT_HOST='%'
+      # 自定义root密码修改此处
+      MYSQL_ROOT_PASSWORD: <your password>
+      MYSQL_ROOT_HOST: '%'

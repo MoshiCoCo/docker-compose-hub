@@ -34,8 +34,8 @@ services:
       - $PWD/mysqlBackup:/data/mysqlBackup
     environment:
       # 自定义root密码修改此处
-      - MYSQL_ROOT_PASSWORD=<your password>
-      - MYSQL_ROOT_HOST='%'
+      MYSQL_ROOT_PASSWORD: <your password>
+      MYSQL_ROOT_HOST: '%'
 ```
 
 启动方式：

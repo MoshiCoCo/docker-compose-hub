@@ -1,1 +1,0 @@
-import{_ as e,c as n,o as t}from"./chunks/framework.-Zveb6AF.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"dev-environment/index.md","filePath":"dev-environment/index.md"}'),r={name:"dev-environment/index.md"};function a(o,d,i,s,c,m){return t(),n("div")}const f=e(r,[["render",a]]);export{_ as __pageData,f as default};

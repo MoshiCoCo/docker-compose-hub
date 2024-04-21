@@ -54,7 +54,7 @@ jobs:
           # Github 会在 workflow 中自动生成 GIHUBT_TOKEN，用于认证 workflow 的运行
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # 静态资源目录设置
-          publish_dir: ./build
+          publish_dir: ./docs/.vitepress/dist
           # 默认发布到 gh-pages 分支上，可以指定特定的发布分支（不能选拉取代码的分支）
           publish_branch: gh-pages
           cname: docker-compose.misec.top

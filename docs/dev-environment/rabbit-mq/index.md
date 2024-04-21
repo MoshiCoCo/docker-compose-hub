@@ -7,7 +7,7 @@
 docker-compose.yaml文件示例
 
 ```yaml
-version: '3'
+
 services:
   rabbit-mq:
     # 镜像名称以及版本号

@@ -141,7 +141,7 @@ requirepass ${requirepass}
 ```
 
 ```yaml
-version: '3'
+
 services:
   redis:
     # 镜像名称以及版本号

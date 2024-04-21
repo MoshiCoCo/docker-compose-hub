@@ -10,11 +10,11 @@ hero:
   tagline: Docker Compose Hub
   actions:
     - theme: brand
-      text:
+      text: 常用工具
       link: /tools/
     - theme: alt
-      text: Quickstart
-      link: /tools/
+      text: 开发环境
+      link: /dev-environment/
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress

@@ -5,7 +5,6 @@
 自定义的root账户密码需要在environment中修改MYSQL_ROOT_PASSWORD。
 
 ```yaml
-version: '3'
 services:
   mysql:
     image: mysql:8.0.18

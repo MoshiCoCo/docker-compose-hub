@@ -17,7 +17,7 @@ docker compose up -d
 ```
 
 ```yaml
-version: '3'
+
 services:
   redis:
     # 镜像名称以及版本号
@@ -39,7 +39,7 @@ services:
 如果需要使用自定义的redis.conf配置文件启动，请使用如下compose编排文件启动。将redis.conf放置在docker-redis目录下。
 
 ```yaml
-version: '3'
+
 services:
   redis:
     # 镜像名称以及版本号

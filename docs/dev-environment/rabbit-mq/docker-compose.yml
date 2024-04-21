@@ -1,4 +1,4 @@
-version: '3'
+
 services:
   rabbit-mq:
     # 镜像名称以及版本号

@@ -40,12 +40,12 @@ jobs:
         # https://github.com/actions/setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
       - name: Build
         # 安装 Node 之后就可以执行构建脚本
         run: |
           npm install
-          npm run build
+          npm run docs:build
       - name: Deploy
         # 将构建产物 commit 到一个分支上，用于发布静态站点资源
         # https://github.com/peaceiris/actions-gh-pages

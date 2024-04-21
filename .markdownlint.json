@@ -1,11 +1,12 @@
 {
     "line-length": {
       "strict": true,
-      "code_blocks": false
+      "code_blocks": true
     },
     "allowed_elements":"html",
     "MD009": false,
     "MD013": false,
+    "MD012": false,
     "MD033": false,
     "MD041":false
 }

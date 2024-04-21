@@ -5,7 +5,7 @@ title: Install Docker & Docker Compose
 description: Install Docker
 ---
 
-### 安装 Docker
+## 安装 Docker
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -13,7 +13,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-### 安装 Docker-Compose
+## 安装 Docker-Compose
 
 如果你的Docker版本较新,可直接使用`docker compose`命令,无需安装`docker-compose`
 

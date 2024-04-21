@@ -1,9 +1,3 @@
----
-id: About-Docker-Compose
-sidebar_position: 2
-title: About Docker-Compose
-description: About Docker-Compose
----
 
 ## docker-compose.yml
 

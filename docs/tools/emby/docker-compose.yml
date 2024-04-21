@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  emby-server:
+    image: emby/embyserver_arm64v8:latest
+    container_name: emby-server
+    restart: always
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - ./data/movie:/data/movie
+      - ./emby/config:/emby/config
+    ports:
+      - "8096:8096"
+      - "8920:8920"
+      - "1900:1900"
+      - "7359:7359"
+    environment:
+      - TZ:Asia/Shanghai
+      - GID:0
+      - UID:0
+      - GIDLIST:0

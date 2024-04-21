@@ -57,15 +57,15 @@ cd docs/mysql && docker compose up -d
 
 ### 常用工具
 
-- [Vaultwarden](docs/tool/vaultwarden) 密码管理器
-- [Qinglong](docs/tool/qinglong) 脚本运行服务
-- [Bark Server](docs/tool/bark) 消息推送服务端
-- [Drawio](docs/tool/drawio) 画图工具，流程图，UML 等
-- [Acme.sh](docs/tool/acme-sh) 免费 SSL 生成工具
-- [Halo](docs/tool/halo) Halo 博客
-- [Frp](docs/tool/frp) frp 代理服务器
-- [Netdata](docs/tool/netdata) Netdata 网络监控工具
-- [WordPress](docs/tool/wordpress) WordPress博客
+- [VaultWarden](docs/tools/vaultwarden) 密码管理器
+- [QingLong](docs/tools/qinglong) 脚本运行服务
+- [Bark Server](docs/tools/bark) 消息推送服务端
+- [DrawIo](docs/tools/drawio) 画图工具，流程图，UML 等
+- [Acme.sh](docs/tools/acme-sh) 免费 SSL 生成工具
+- [Halo](docs/tools/halo) Halo 博客
+- [Frp](docs/tools/frp) frp 代理服务器
+- [NetData](docs/tools/netdata) Netdata 网络监控工具
+- [WordPress](docs/tools/wordpress) WordPress博客
 - .....
 
 详细支持列表请查阅 [完整的镜像列表](docs/projet-info/support-list.md)
